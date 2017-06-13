@@ -1,0 +1,108 @@
+{% extends "WebBundle::pagelayout.html.twig" %}
+
+{% block topMenu %}
+    {% include 'WebBundle::menuEn.html.twig' %}
+{% endblock %}
+
+{% block content %}
+    <section class="text-block">
+        <div class="light-bg">
+            <div class="container">
+                <h2 class="with-border">{% trans %}{{ transport.title }}{% endtrans %}</h2>
+                <ul class="thumbnails" style="float: left; margin: 25px">
+                        <li class="span3">
+                            <div class="thumbnail">
+                                <div class="img-wrap">
+                                    <a href="/uploads/{{ transport.image }}" rel="group{{ transport.id }}">
+                                        <div class="black-bg">
+                                            <i class="icon-zoom-in"></i>
+                                        </div>
+                                        <img src="/uploads/{{ transport.image }}"/>
+                                        <h3 class="with-border">
+                                            {% trans %}{{ transport.title }}{% endtrans %}
+                                        </h3>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+                {% trans %}{{ transport.description|raw }}{% endtrans %}
+            </div>
+        </div>
+
+        <div class="hidden" id="img-repo">
+                {% for photo in transport.gallery %}
+                    <a rel="group{{ transport.id }}" href="/uploads/gallery/{{ photo }}"></a>
+                {% endfor %}
+        </div>
+    </section>
+
+
+
+{% endblock %}
+{% block footer %}
+    <div class="bottom-parallax small-view" style="background-image: url(/images/eb75ded65a196db839c818cd579607c3.jpg);">
+        <div class="black-bg">
+            <div class="container">
+                <h3>Odessa Bus-Tours</h3>
+                <h4>
+                    Can you imagine a holiday without us?
+                </h4>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="light-bg">
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="span4">
+                        <h4>Contacts</h4>
+                        <div class="info-block">
+                            <article class="clearfix">
+                                <i class="icon-phone"></i>
+                                <p>(095)-015-0000</p>
+                                <p>(050)-492-6000</p>
+                            </article>
+                            <article class="clearfix">
+                                <i class="icon-envelope"></i>
+                                <p><a href="mailto:odessabustours@gmail.com">odessabustours@gmail.com</a></p>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="span4 offset4">
+                        <div class="social">
+                            <ul class="unstyled clearfix">
+                                <li>
+                                    <a target="_blank" title="" href="http://facebook.com/odessabustours">
+                                        <i class="icon-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" title="" href="http://vk.com/odessabustours">
+                                        <i class="icon-vk"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/odessa_bus_tours/" title="" target="_blank">
+                                        <i class="icon-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-block dark-bg clearfix">
+            <div class="container">
+                <div class="pull-left">
+                    <p class="pull-left">Copyright &copy; 2013 by <a href="mailto:dimon86@ukr.net">DSolo</a>. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        jQuery("a[rel='group{{ transport.id }}']").colorbox();
+    </script>
+{% endblock %}

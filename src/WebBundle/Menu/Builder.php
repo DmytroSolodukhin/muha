@@ -60,4 +60,46 @@ class Builder extends ContainerAware
         return $menu;
     }
 
+    /**
+     * @param FactoryInterface $factory
+     * @param array            $options
+     *
+     * @return ItemInterface
+     */
+    public function mainMenuEn(FactoryInterface $factory, array $options)
+    {
+        $menu = $factory->createItem('root', ['childrenAttributes' => ['class'=>'nav navbar-nav navbar-right'] ]);
+
+        $menu->addChild('Home', ['route' => 'web_homepage']);
+
+        $transport = $this->container->get('transport.handler')->getEntities();
+
+        if($transport){
+            $menu->addChild('Auto', [
+                'uri' => '#'
+            ])
+                ->setAttribute('class', 'dropdown')
+                ->setLinkAttribute('class', 'dropdown-toggle')
+                ->setLinkAttribute('data-toggle', 'dropdown')
+                ->setChildrenAttribute('class', 'dropdown-menu')
+                ->setChildrenAttribute('role', 'menu');
+
+            /** @var Transport $avto */
+            foreach($transport as $avto){
+                $menu['Auto']->addChild($avto->getTitle(),[
+                    'route' => 'web_auto',
+                    'routeParameters' => ['id' => $avto->getId()]
+                ]);
+                if($avto->getOriginalImage()) {
+                    $menu['Авто'][$avto->getTitle()]->setAttribute('src', $avto->getWebPath());
+                }
+            }
+        }
+
+        $menu->addChild('Photo', ['route' => 'web_photo']);
+        $menu->addChild('Video', ['route' => 'web_video']);
+
+        return $menu;
+    }
+
 }

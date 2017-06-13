@@ -1,0 +1,17 @@
+web_homepage_en:
+    path:     /
+    defaults: { _controller: WebBundle:Default:indexEn }
+
+web_photo_en:
+    path:     /photo
+    defaults: { _controller: WebBundle:Default:photoEn }
+
+web_video_en:
+    path:     /video
+    defaults: { _controller: WebBundle:Default:videoEn }
+
+web_auto_en:
+    path:     /auto/{id}
+    defaults: { _controller: WebBundle:Default:autoEn }
+    requirements:
+        id: \d+

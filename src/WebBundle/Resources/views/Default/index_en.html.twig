@@ -1,0 +1,268 @@
+{% extends "WebBundle::pagelayout.html.twig" %}
+
+{% block page_head_js %}
+    {{ parent() }}
+
+
+{% block topMenu %}
+    {% include 'WebBundle::menuEn.html.twig' %}
+{% endblock %}
+
+{% endblock %}
+
+    {% block welcome %}
+        <div id="welcome" class="parallax large-view" onclick="" style="background-image: url(/images/eb75ded65a196db839c818cd579607c3.jpg);">
+            <div class="text logotext">
+                <p><img src="/images/index/logo.png" width="300"></p>
+            </div>
+        </div>
+    {% endblock %}
+
+{% block content %}
+<section class="text-block">
+    <div class="features text-center dark-bg">
+        <div class="container">
+            <div class="row-fluid">
+                <article class="span3">
+
+                    <h3 class="with-border">EXCURSIONS</h3>
+                    <p>
+                        Individual and group tours across the city. We offer only comfy upscale buses and a big variety of tour themes (from family to club ones). Shopping and gastro tours. We work with a number of guides, who offer original tour programmes.
+                    </p>
+                </article>
+                <article class="span3">
+                    <h3 class="with-border">City Breaks</h3>
+                    <p>
+                        Arboretum Sofiyivka, Multimedia Fountain in Vinnytsia city, Shabo, Bilhorod-Dnistrovskyi and any other destinations. Religious tours. Guides and photographers-operators are available.
+                    </p>
+                </article>
+                <article class="span3">
+                    <h3 class="with-border">Transfer service</h3>
+                    <p>
+                        To the airports and railway\bus stations of Odessa, Kyiv, Chișinău. Passenger transportations to any destination in Ukraine. Transport is suitable for people with special needs (upon request).
+                    </p>
+                </article>
+                <article class="span3">
+                    <h3 class="with-border">Weddings</h3>
+                    <p>
+                        Gorgeous and comfy transportation for newlyweds, their parents and guests. All our buses are fitted with an air-conditioning system, an interactive TV, a professional audio system and a small fridge.
+
+                    </p>
+
+                </article>
+            </div>
+        </div>
+    </div>
+    <div class="dark-bg">
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span6">
+                    <h2 class="with-border">Why choose us?</h2>
+                    <div id="accordion" class="section">
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" style="height: auto;" data-parent="#accordion" href="#collapseOne">
+                                    <i class="icon-resize-full"></i>Our guides are Odessa natives
+                                </a>
+                            </div>
+                            <div id="collapseOne" class="accordion-body in collapse" style="height: auto;">
+                                <div class="accordion-inner">
+                                    <p>
+                                        It’s all about Odessa flavour. Odessa can amaze even the most tried guests. Our guides speak your language (upon requests).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                    <i class="icon-magic"></i> Up-scale sightseeing buses
+                                </a>
+                            </div>
+                            <div id="collapseTwo" class="accordion-body collapse">
+                                <div class="accordion-inner">
+                                    <p>
+                                        Our buses have been adapted upon the special design and transformed into comfy business-class cruise liners.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                    <i class="icon-thumbs-up"></i> Complete services
+                                </a>
+                            </div>
+                            <div id="collapseThree" class="accordion-body collapse">
+                                <div class="accordion-inner">
+                                    <p>
+                                        Excursions, transportation and tours on a turnkey basis. Information support for our clients and partners. We cover work with corporate clients and business transportation as well as promo-rounds. We collaborate with tour operators.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                                    <i class="icon-cogs"></i> Special offer for hotels
+                                </a>
+                            </div>
+                            <div id="collapseFour" class="accordion-body collapse">
+                                <div class="accordion-inner">
+                                    <p>
+                                        A discount for tourist groups, publication of promotional content. You can book a promo-round to test out buses.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="span6">
+                    <h2 class="with-border">feedback:</h2>
+                    <div id="myCarousel" class="carousel slide section">
+                        <div class="carousel-inner">
+                            <div class="active item">
+                                <div class="testimonials-block">
+                                    <article>
+                                        <blockquote>
+                                            “A reliable partner - highly recommended!"
+                                        </blockquote>
+                                        <b class="caret"></b>
+                                        <p class="author">
+                                            <i class="icon-user"></i>
+                                            T. Markova, the head of the Odessa City Council culture and tourism department office
+                                        </p>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonials-block">
+                                    <article>
+                                        <blockquote>
+                                            “Great worked at the festival, thank you!"
+                                        </blockquote>
+                                        <b class="caret"></b>
+                                        <p class="author">
+                                            <i class="icon-user"></i>
+                                            Sergei Kulik, musicians coordinator, Z-Games festival
+                                        </p>
+                                    </article>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="testimonials-block">
+                                    <article>
+                                        <blockquote>
+                                            “Very pleased with our collaboration. Everything’s nice and on time!”
+                                        </blockquote>
+                                        <b class="caret"></b>
+                                        <p class="author">
+                                            <i class="icon-user"></i>
+                                            Ekaterina, a hotel manager
+                                        </p>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonials-block">
+                                    <article>
+                                        <blockquote>
+                                            “Thank you for taking care of our wedding guests!”
+                                        </blockquote>
+                                        <b class="caret"></b>
+                                        <p class="author">
+                                            <i class="icon-user"></i>
+                                            Natasha, a bride
+                                        </p>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonials-block">
+                                    <article>
+                                        <blockquote>
+                                            “It’s of a big pleasure to tell about Odessa in such tour buses.”
+                                        </blockquote>
+                                        <b class="caret"></b>
+                                        <p class="author">
+                                            <i class="icon-user"></i>
+                                            Valentina Nizova, tourist guide.
+                                        </p>
+                                    </article>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block footer %}
+    <div class="bottom-parallax small-view" style="background-image: url(/images/eb75ded65a196db839c818cd579607c3.jpg);">
+        <div class="black-bg">
+            <div class="container">
+                <h3>Odessa Bus-Tours</h3>
+                <h4>
+                    Can you imagine a holiday without us?
+                </h4>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="light-bg">
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="span4">
+                        <h4>Contacts</h4>
+                        <div class="info-block">
+                            <article class="clearfix">
+                                <i class="icon-phone"></i>
+                                <p>(095)-015-0000</p>
+                                <p>(050)-492-6000</p>
+                            </article>
+                            <article class="clearfix">
+                                <i class="icon-envelope"></i>
+                                <p><a href="mailto:odessabustours@gmail.com">odessabustours@gmail.com</a></p>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="span4 offset4">
+                        <div class="social">
+                            <ul class="unstyled clearfix">
+                                <li>
+                                    <a target="_blank" title="" href="http://facebook.com/odessabustours">
+                                        <i class="icon-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" title="" href="http://vk.com/odessabustours">
+                                        <i class="icon-vk"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/odessa_bus_tours/" title="" target="_blank">
+                                        <i class="icon-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-block dark-bg clearfix">
+            <div class="container">
+                <div class="pull-left">
+                    <p class="pull-left">Copyright &copy; 2013 by <a href="mailto:dimon86@ukr.net">DSolo</a>. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+{% endblock %}

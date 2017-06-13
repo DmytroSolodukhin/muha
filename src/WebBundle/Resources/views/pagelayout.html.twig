@@ -91,7 +91,7 @@
                     <div class="container">
                         <h3>Odessa Bus-Tours</h3>
                         <h4>
-                            И как вы представляете праздник без нас?
+                            {% trans %}И как вы представляете праздник без нас{% endtrans %}?
                         </h4>
                     </div>
                 </div>
@@ -101,7 +101,7 @@
                     <div class="container">
                         <div class="row-fluid">
                             <div class="span4">
-                                <h4>Контакты</h4>
+                                <h4>{% trans %}Контакты{% endtrans %}</h4>
                                 <div class="info-block">
                                     <article class="clearfix">
                                         <i class="icon-phone"></i>
@@ -115,7 +115,7 @@
                                 </div>
                             </div>
                             <div class="span4 offset4">
-                                <h4>Мы здесь</h4>
+                                <h4>{% trans %}Мы здесь{% endtrans %}</h4>
                                 <div class="social">
                                     <ul class="unstyled clearfix">
                                         <li>
@@ -147,6 +147,8 @@
                     </div>
                 </div>
             </footer>
+
+        {% endblock %}
             <a class="goTop goTop-link"><i class="icon-angle-up"></i></a>
 
             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -196,8 +198,6 @@
             </script>
             <noscript><div><img src="https://mc.yandex.ru/watch/36562160" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
             <!— /Yandex.Metrika counter —>
-        {% endblock %}
-
 
     </body>
 </html>
