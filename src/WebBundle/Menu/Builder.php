@@ -91,7 +91,7 @@ class Builder extends ContainerAware
                     'routeParameters' => ['id' => $avto->getId()]
                 ]);
                 if($avto->getOriginalImage()) {
-                    $menu['Авто'][$avto->getTitle()]->setAttribute('src', $avto->getWebPath());
+                    $menu['Auto'][$avto->getTitle()]->setAttribute('src', $avto->getWebPath());
                 }
             }
         }
